@@ -1,0 +1,114 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fotolip.com%2Fwp-content%2Fuploads%2F2016%2F05%2FPowerpoint-Template-6.jpg&f=1&nofb=1&ipt=9ed2e358e39b4a03f53dfbffdcd3eface3c1930c4db28d4b3a927360c57902d1");
+}
+
+#header {
+  text-align: center;
+}
+
+#container {
+  width: 75%;
+  padding: 0 5rem;
+}
+
+#input_todo_list {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+#listing-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  padding: 0px;
+  margin-right: auto;
+}
+
+#listing-container li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#list-delete {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+#alert-tag {
+  padding: 0.2rem;
+  margin: 0;
+  text-transform: capitalize;
+  margin-left: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+#form-section-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 720px) {
+  #container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  #edit_form {
+    position: absolute;
+    text-align: center;
+    left: 0%;
+    top: 11%;
+    height: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(45deg, #a19a9a, transparent);
+  }
+
+  #mobile_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    align-items: normal;
+    justify-content: center;
+  }
+
+  #mobile_form #add_btn {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
