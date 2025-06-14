@@ -69,11 +69,11 @@
                 <%}%>
               </span>
               <span id="form-section-btn">
-                <form
-                  action="/editTodo"
+                <form                 
                   method="put"
                   class="hide"
                   id="edit_form"
+                  onsubmit="handleEdit(event, '<%= list[i].id %>')" 
                 >
                   <input
                     type="hidden"
