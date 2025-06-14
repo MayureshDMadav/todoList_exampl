@@ -22,3 +22,29 @@ const handleEditToogle = (event, i) => {
     }
   }
 };
+
+
+const handleEdit = (event, todoId) => {
+  event.preventDefault();
+  const form = event.target;
+  const updatedText = form.edit_input.value;
+  const priority = form.priority.value;
+
+  fetch('/editTodo', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      todo_id: todoId,
+      edit_input: updatedText,
+      priority: priority
+    })
+  }).then(res => {
+    if (res.redirected) {
+      window.location.href = res.url;
+    } else {
+      window.location.reload();
+    }
+  }).catch(err => console.error(err));
+}
