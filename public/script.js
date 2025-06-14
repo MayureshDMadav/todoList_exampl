@@ -48,3 +48,22 @@ const handleEdit = (event, todoId) => {
     }
   }).catch(err => console.error(err));
 }
+
+
+const handleDelete = (todoId) => {
+  fetch('/delete', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ todo_id: todoId })
+  }).then(res => {
+    if (res.redirected) {
+      window.location.href = res.url;
+    } else {
+      window.location.reload();
+    }
+  }).catch(err => console.error(err));
+}
+
+
