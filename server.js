@@ -31,7 +31,7 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.post("/editTodo", async (req, res) => {
+app.put("/editTodo", async (req, res) => {
   try {
     const todoid = req.body["todo_id"];
     const updatedText = req.body["edit_input"];
@@ -49,7 +49,7 @@ app.post("/editTodo", async (req, res) => {
   }
 });
 
-app.post("/delete", async (req, res) => {
+app.delete("/delete", async (req, res) => {
   try {
     const dataToDelete = req.body["todo_id"];
     const response = await database.findByIdAndDelete(dataToDelete);
